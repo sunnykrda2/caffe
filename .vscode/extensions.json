@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 {
     "recommendations": [
         "hookyqr.minify"
     ]
+=======
+{
+    "recommendations": [
+        "hookyqr.minify"
+    ]
+>>>>>>> 27c3599a35a3f054c3fd11201d11acd2fbfd0dc3
 }

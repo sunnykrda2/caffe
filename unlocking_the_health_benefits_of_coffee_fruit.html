@@ -81,9 +81,14 @@
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>$(function(){
-            $("#header").load("header.html");});
-    </script>
+    <script>
+      $(function(){
+          $("#header").load("header.html", function() {
+              $(".home-navbar-interactive").css("height", "60px");
+          });
+      });
+      </script>
+      
   </head>
   <body>
     <link rel="stylesheet" href="./index.min.css" />
@@ -107,7 +112,8 @@
                 </a>
                 <div id="emailInputContainer">
                   <input type="email" id="emailInput" placeholder="Enter your email">
-                  <button class="home-btn-group-1"  onclick="submitEmail()">Join Kickstarter waitlist</button>
+                 <button class="home-btn-group-1" onclick="submitEmail(); gtag('event', 'click', {'event_category': 'Button Click', 'event_label': 'Join Kickstarter Waitlist'});">Join Kickstarter waitlist</button>
+
                   <p id="emailError" class="errormsg" style="color: red; display: none;">Email is required to join the Kickstarter waitlist.</p>
                 </div>
                 <div id="checkMarkContainer" class="hidden">
